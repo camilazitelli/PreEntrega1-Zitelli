@@ -1,9 +1,9 @@
 function resta(a, b) {
-  return a - b;
+    return a - b;
 }
 
 function calcularDescuento(a, b, c) {
-  return (a * b) / c;
+    return (a * b) / c;
 }
 
 let precioAperol = 1300;
@@ -18,52 +18,40 @@ let precioDescGin = calcularDescuento(precioGin, 10, 100);
 
 let entrada = prompt("Es usted mayor de 18 años?");
 while (entrada != "ESC") {
-  switch (entrada) {
+    switch (entrada) {
     case "Si":
     case "si":
     case "SI":
-    case "sI":            
-      alert("Bienvenido a la tienda de Corchos & Barriles");
-      alert("A continuación te mostramos las bebidas disponibles");
-      let seleccion = prompt(
+    case "sI":
+        alert("Bienvenido a la tienda de Corchos & Barriles");
+        alert("A continuación te mostramos las bebidas disponibles");
+        let seleccion = prompt(
         "Ingrese el numero de la bebida de la cual desea conocer el precio: 1-Aperol, 2-Cynar, 3-Fernet, 4-Gin"
-      );
-      if (seleccion == 1) {
-        alert(
-          "El precio es $1300, si abona en efectivo o transferencia el precio es $" +
-            resta(precioAperol, precioDescAperol)
         );
-      }
-      if (seleccion == 2) {
-        alert(
-          "El precio es $1200, si abona en efectivo o transferencia el precio es $" +
-            resta(precioCynar, precioDescCynar)
-        );
-      }
-      if (seleccion == 3) {
-        alert(
-          "El precio es $1900, si abona en efectivo o transferencia el precio es $" +
-            resta(precioFernet, precioDescFernet)
-        );
-      }
-      if (seleccion == 4) {
-        alert(
-          "El precio es $1800, si abona en efectivo o transferencia el precio es $" +
-            resta(precioGin, precioDescGin)
-        );
-      } else {
+    if (seleccion == 1) {
+        alert("El precio es $1300, si abona en efectivo o transferencia el precio es $" + resta(precioAperol, precioDescAperol));
+        }
+    if (seleccion == 2) {
+        alert("El precio es $1200, si abona en efectivo o transferencia el precio es $" + resta(precioCynar, precioDescCynar));
+        }
+    if (seleccion == 3) {
+        alert("El precio es $1900, si abona en efectivo o transferencia el precio es $" + resta(precioFernet, precioDescFernet));
+        }
+    if (seleccion == 4) {
+        alert("El precio es $1800, si abona en efectivo o transferencia el precio es $" + resta(precioGin, precioDescGin));
+        } else {
         alert("Ingrese una opción válida");
-      }
-      break;
+        }
+        break;
     case "No":
-        case "NO":
-            case "no":
-                case "nO":    
-      alert("Lo sentimos, no puede continuar");
-      continue;
+    case "NO":
+    case "no":
+    case "nO":
+        alert("Lo sentimos, no puede continuar");
+        continue;
     default:
-      alert("Debe ingresar ''si'' o ''no''");
-      break;
-  }
-  entrada = prompt("Es usted mayor de 18 años?");
+        alert("Debe ingresar ''si'' o ''no''");
+        break;
+    }
+    entrada = prompt("Es usted mayor de 18 años?");
 }
