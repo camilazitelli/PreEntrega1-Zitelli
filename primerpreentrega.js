@@ -16,6 +16,7 @@ let precioDescCynar = calcularDescuento(precioCynar, 10, 100);
 let precioDescFernet = calcularDescuento(precioFernet, 10, 100);
 let precioDescGin = calcularDescuento(precioGin, 10, 100);
 
+
 let entrada = prompt("Es usted mayor de 18 años?");
 while (entrada != "ESC") {
     switch (entrada) {
@@ -25,9 +26,7 @@ while (entrada != "ESC") {
     case "sI":
         alert("Bienvenido a la tienda de Corchos & Barriles");
         alert("A continuación te mostramos las bebidas disponibles");
-        let seleccion = prompt(
-        "Ingrese el numero de la bebida de la cual desea conocer el precio: 1-Aperol, 2-Cynar, 3-Fernet, 4-Gin"
-        );
+        let seleccion = prompt("Ingrese el numero de la bebida de la cual desea conocer el precio: 1-Aperol, 2-Cynar, 3-Fernet, 4-Gin");
     if (seleccion == 1) {
         alert("El precio es $1300, si abona en efectivo o transferencia el precio es $" + resta(precioAperol, precioDescAperol));
         }
@@ -39,7 +38,8 @@ while (entrada != "ESC") {
         }
     if (seleccion == 4) {
         alert("El precio es $1800, si abona en efectivo o transferencia el precio es $" + resta(precioGin, precioDescGin));
-        } else {
+        continue;
+    } else {
         alert("Ingrese una opción válida");
         }
         break;
@@ -48,10 +48,11 @@ while (entrada != "ESC") {
     case "no":
     case "nO":
         alert("Lo sentimos, no puede continuar");
-        continue;
+        break;
     default:
         alert("Debe ingresar ''si'' o ''no''");
         break;
     }
     entrada = prompt("Es usted mayor de 18 años?");
 }
+
